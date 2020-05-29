@@ -159,11 +159,36 @@ namespace CustomListUnitTests
 
             thing.Remove(20);
 
-            int actual = thing.Capactiy;
+            int actual = thing.Capacity;
 
             //Assert
             Assert.AreEqual(expected, actual);
 
         }
+
+        [TestMethod]
+
+        public void Remove_Method_Test2()
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 0;
+
+            //Act
+            thing.Add(5);
+            thing.Add(10);
+            thing.Add(15);
+            thing.Add(20);
+
+            thing.Remove(20);
+
+            int actual = thing[4];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
     }
 }
