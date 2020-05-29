@@ -124,6 +124,28 @@ namespace CustomListUnitTests
         }
 
 
+        [TestMethod]
 
+        public void Remove_ItemShifted()
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 10;
+
+            //Act
+            thing.Add(5);
+            thing.Add(10);
+            thing.Add(15);
+            thing.Add(20);
+
+            thing.Remove(5);
+
+            int actual = thing[0];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+
+        }
     }
 }
