@@ -35,11 +35,7 @@ namespace CustomListUnitTests
             thing.Add(value1);
             thing.Add(value1);
             thing.Add(value1);
-            thing.Add(value1);
-            thing.Add(value1);
-            thing.Add(value1);
-            thing.Add(value1);
-            thing.Add(value1);
+            
             actual = thing.Count;
             //assert
             Assert.AreEqual(expected, actual);
@@ -145,6 +141,28 @@ namespace CustomListUnitTests
             //Assert
             Assert.AreEqual(expected, actual);
 
+        }
+
+        [TestMethod]
+
+        public void Remove_Method_Test()
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 3;
+
+            //Act
+            thing.Add(5);
+            thing.Add(10);
+            thing.Add(15);
+            thing.Add(20);
+
+            thing.Remove(20);
+
+            int actual = thing.Capactiy;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
 
         }
     }
