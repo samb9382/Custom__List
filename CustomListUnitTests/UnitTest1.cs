@@ -21,6 +21,7 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
         public void Add_TwoPositiveValues_returnPostiveSum1()
         {
@@ -43,5 +44,43 @@ namespace CustomListUnitTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+
+        public void Add_ValueAt_Index0() //int value of 5 expected at index 0
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 5;
+
+            //Act
+            thing.Add(5);
+
+            int actual = thing[0]; //c# indexer
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+
+        public void TestMethod2() //int value 10 expected at index 1
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 10;
+
+            //Act
+            thing.Add(5);
+            thing.Add(10);
+
+
+            int actual = thing[1];
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
     }
 }

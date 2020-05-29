@@ -11,10 +11,21 @@ namespace CustomListProj
         private T[] items = new T[4];
         private int count = 0;
         private int capacity;
+
+        public CustomList1()
+        {
+
+        }
+
+
         public void Add(T item)
         {
-           
-           
+            
+        }
+
+        public void Remove(T item)
+        {
+            
         }
     }
 }
