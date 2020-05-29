@@ -64,7 +64,7 @@ namespace CustomListUnitTests
 
         [TestMethod]
 
-        public void TestMethod2() //int value 10 expected at index 1
+        public void Add_ValueAt_Index1() //int value 10 expected at index 1
         {
             //Arrange
             CustomList1<int> thing = new CustomList1<int>();
@@ -80,7 +80,50 @@ namespace CustomListUnitTests
             //Assert
             Assert.AreEqual(expected, actual);
 
-        }s
+        }
+
+        [TestMethod]
+
+        public void Add_CountAt_Index1()
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>();
+            int expected = 1;
+
+            //Act
+            thing.Add(5);
+
+            int actual = thing.Count;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+
+        public void TestMethod5()//Checking capactiy
+        {
+            //Arrange
+            CustomList1<int> thing = new CustomList1<int>(25);
+            int expected = 8;
+
+            //Act
+            thing.Add(5);
+            thing.Add(10);
+            thing.Add(15);
+            thing.Add(20);
+            thing.Add(25);
+
+            int actual = thing.Capacity;
+
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
 
     }
 }
