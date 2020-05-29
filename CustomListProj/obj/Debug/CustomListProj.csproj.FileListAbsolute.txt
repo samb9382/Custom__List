@@ -1,2 +1,0 @@
-C:\Users\samb9\source\repos\CustomListProj\CustomListProj\obj\Debug\CustomListProj.csprojAssemblyReference.cache
-C:\Users\samb9\source\repos\CustomListProj\CustomListProj\obj\Debug\CustomListProj.csproj.CoreCompileInputs.cache
