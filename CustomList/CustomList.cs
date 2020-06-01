@@ -20,12 +20,18 @@ namespace CustomListProj
 
         public void Add(T item)
         {
-            
+            if (count == capacity)
+            {
+                count++;
+            }
         }
 
         public void Remove(T item)
         {
-            
+            if (count >= capacity)
+            {
+                count--;
+            }
         }
     }
 }
